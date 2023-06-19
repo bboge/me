@@ -13,6 +13,12 @@ def is_odd(a_number):
 
     So if a_number modulo two is zero, then it's even.
     """
+
+    if (a_number % 2) == 0:
+        return False
+    else:
+        return True
+    
     return None
 
 
@@ -31,6 +37,14 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
+
+    if moves==True and should_move==True or moves==False and should_move==False:
+        return "No Problem"
+    elif moves==True and should_move==False:
+        return "Duct Tape"
+    else:
+        return "WD-40"
+
     return None
 
 
@@ -54,6 +68,12 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
+
+    star_list = []
+    for i in range(10):
+        star_list.append("*")
+    return star_list
+
     return None
 
 
@@ -67,6 +87,12 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
+
+    symbol_list = []
+    for i in range(number_of_items):
+        symbol_list.append(symbol)
+    return symbol_list
+
     return None
 
 
@@ -88,6 +114,15 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
+
+    star_field = []
+    for i in range(10):
+        star_row = []
+        for i in range(10):
+            star_row.append("*")
+        star_field.append(star_row)
+    return star_field
+
     return None
 
 
@@ -112,6 +147,15 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
+
+    rising_number_block = []
+    for i in range(10):
+        number_row = []
+        for x in range(10):
+            number_row.append(str(i))
+        rising_number_block.append(number_row)
+    return rising_number_block
+
     return None
 
 
@@ -132,6 +176,15 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
+
+    rising_number_block = []
+    for i in range(10):
+        number_row = []
+        for i in range(10):
+            number_row.append(str(i))
+        rising_number_block.append(number_row)
+    return rising_number_block
+
     return None
 
 
@@ -162,6 +215,16 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
+
+    coords_block = []
+    for i in range(10):
+        row = []
+        for j in range(5):
+            coord = f"(i{i}, j{j})"
+            row.append(coord)
+        coords_block.append(row)
+    return coords_block
+
     return None
 
 
@@ -185,6 +248,15 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
+
+    wedge = []
+    for i in range(10):
+        row = []
+        for x in range(i+1):
+            row.append(str(x))
+        wedge.append(row)
+    return wedge
+
     return None
 
 
@@ -209,6 +281,9 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
+
+    
+
     return None
 
 
