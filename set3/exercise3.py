@@ -5,6 +5,7 @@ Steps on the way to making your own guessing game.
 
 import random
 
+<<<<<<< HEAD
 def valid_number(guess):
     while True:
        try:
@@ -12,6 +13,15 @@ def valid_number(guess):
           return number
        except ValueError:
           print("Not a number, try again")
+=======
+def valid_number(prompt):
+     while True:
+        try:
+           number = int(input(prompt))
+           return number
+        except ValueError:
+           print("Not a number, try again")
+>>>>>>> edd5675 (99)
 
 def advancedGuessingGame():
     """Play a guessing game with a user.
@@ -38,12 +48,20 @@ def advancedGuessingGame():
 
     print("\nWelcome to the new and improved guessing game!")
     print("A number between _ and _ ?")
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> edd5675 (99)
     lowerBound = valid_number("Enter a lower bound: ")
     upperBound = valid_number("Enter an upper bound: ")
 
     print(f"OK then, a number between {lowerBound} and {upperBound} ?")
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> edd5675 (99)
     actualNumber = random.randint(lowerBound, upperBound)
 
     guessed = False
