@@ -5,10 +5,10 @@ Steps on the way to making your own guessing game.
 
 import random
 
-def valid_number(prompt):
+def valid_number(guess):
     while True:
        try:
-          number = int(input(prompt))
+          number = int(input(guess))
           return number
        except ValueError:
           print("Not a number, try again")
