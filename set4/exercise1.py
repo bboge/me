@@ -38,8 +38,18 @@ def get_some_details():
          dictionaries.
     """
     json_data = open(LOCAL + "/lazyduck.json").read()
-
     data = json.loads(json_data)
+
+    lastName = data["results"][0]["name"]["last"]
+    password = data["results"][0]["login"]["password"]
+    postcode = int(data["results"][0]["location"]["postcode"])
+    ID = int(data["results"][0]["id"]["value"])
+    postcodePlusID = postcode + ID
+
+    dictionary = {"lastName": lastName, "password": password, "poscodePlusID": postcodePlusID}
+
+    return dictionary
+
     return {"lastName": None, "password": None, "postcodePlusID": None}
 
 
@@ -79,6 +89,18 @@ def wordy_pyramid():
     """
     pyramid = []
 
+    for x in range (3, 20, 2):
+        url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={x}"
+        response = requests.get(url)
+        word = response.text.strip()
+        pyramid.append(word)
+    
+    for y in range (20, 3, -2):
+        url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={y}"
+        response = requests.get(url)
+        word = response.text.strip()
+        pyramid.append(word)
+
     return pyramid
 
 
@@ -101,6 +123,26 @@ def pokedex(low=1, high=5):
     r = requests.get(url)
     if r.status_code is 200:
         the_json = json.loads(r.text)
+    
+        tallest_pokemon = {"name": None, "weight": None, "height": None}
+    max_height = 0
+
+    for pokemon_id in range(low, high + 1):
+        url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_id}"
+        r = requests.get(url)
+        if r.status_code == 200:
+            the_json = json.loads(r.text)
+            name = the_json["name"]
+            weight = the_json["weight"]
+            height = the_json["height"]
+
+            if height > max_height:
+                max_height = height
+                tallest_pokemon["name"] = name
+                tallest_pokemon["weight"] = weight
+                tallest_pokemon["height"] = height
+
+    return tallest_pokemon
 
     return {"name": None, "weight": None, "height": None}
 
@@ -124,6 +166,15 @@ def diarist():
     """
     pass
 
+    laser_on_off_count = 0
+
+    with open("Set4/Trispokedovetiles(laser).gcode", "r") as laser:
+            for line in laser:
+                if "M10 P1" in line:
+                    laser_on_off_count += 1
+
+    with open("Set4/lasers.pew", "w") as lasers_pew:
+            lasers_pew.write(str(laser_on_off_count))
 
 if __name__ == "__main__":
     print(get_some_details())

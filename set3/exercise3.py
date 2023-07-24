@@ -70,12 +70,12 @@ def advancedGuessingGame():
       guessedNumber = valid_number("Guess a number: ")
       print(f"You guessed {guessedNumber},")
       if guessedNumber == actualNumber:
-        print(f"You got it!! It was {actualNumber}")
+        print(f"It was {actualNumber}")
         guessed = True
       elif guessedNumber < actualNumber:
-        print("Too small, try again :'(")
+         print("Too small, try again ⬇️")
       else:
-        print("Too big, try again :'(")
+         print("Too big, try again: ⬇️")
 
     return "You got it!"
     # the tests are looking for the exact string "You got it!". Don't modify that!
