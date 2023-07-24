@@ -101,6 +101,8 @@ def wordy_pyramid():
         word = response.text.strip()
         pyramid.append(word)
 
+        pyramid = [word.split()[0] for word in pyramid]
+
     return pyramid
 
 

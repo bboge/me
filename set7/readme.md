@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+Spent the lesson trying to find an adequate data set. Ended up finding a decent one, but will probably try to find a better one by next week.

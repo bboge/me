@@ -282,7 +282,19 @@ def loops_7():
     lots of diagrams!
     """
 
-    
+    pyramid = []
+    height = 5  # Number of rows in the pyramid
+    width = (2 * height) - 1  # Width of the widest row
+
+    for i in range(height):
+        row = []
+        for j in range(width):
+            if j < height - i - 1 or j > height + i - 1:
+                row.append(' ')
+            else:
+                row.append('*')
+        pyramid.append(row)
+    return pyramid
 
     return None
 
