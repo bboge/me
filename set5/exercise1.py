@@ -51,4 +51,4 @@ def list_of_words_with_lengths(list_of_lengths):
 if __name__ == "__main__":
     pyramid = wordy_pyramid()
     for word in pyramid:
-        print(word)
+        print(word) 
