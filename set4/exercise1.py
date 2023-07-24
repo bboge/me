@@ -142,7 +142,7 @@ def pokedex(low=1, high=5):
                 tallest_pokemon["weight"] = weight
                 tallest_pokemon["height"] = height
 
-    return tallest_pokemon
+    return tallest_pokemon 
 
     return {"name": None, "weight": None, "height": None}
 
