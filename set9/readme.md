@@ -1,0 +1,2 @@
+TODO: Reflect on what you learned this week and what is still unclear.
+Not sure what to write here but gotta get those marks I guess. I did try to do set 5 before I realised I didn't have to do it, which is good because I was very confused with exercise 2.

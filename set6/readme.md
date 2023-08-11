@@ -1,0 +1,2 @@
+TODO: Reflect on what you learned this week and what is still unclear.
+Went back and finished up some old exercises that I not finished. With the extra knowledge and experience gained in the time between my first attempt I was able to complete them much easier.

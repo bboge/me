@@ -1,0 +1,2 @@
+TODO: Reflect on what you learned this week and what is still unclear.
+By the end of the sets, I can understand the logic and reasoning behind code, it makes much more sense to me now. In practice it is less confusing, but still confusing, as I always end up looking up stuff and reading through forums.
